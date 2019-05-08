@@ -1,0 +1,155 @@
+/*主页样式*/
+
+#title_size{
+  font-size: 25px;
+  font-weight:bold;
+  font-family: "Helvetica Neue"
+}
+#container{
+  height: 938px;
+}
+.el-header{
+  background-color: white;
+  color: #bfcbd9;
+  text-align: center;
+  line-height: 50px;
+
+}
+.el-aside {
+  /*background-image:url('../img/aa.jpg');*/
+  background-color: #D3DCE6;
+  color: #333;
+  line-height: 200px;
+}
+.el-main {
+  background-color: #E9EEF3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+body > .el-container {
+  margin-bottom: 40px;
+}
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
+}
+.el-main{
+  line-height: 20px;
+}
+
+/*算百分率*/
+.luv_div{
+  width:550px;margin-top:5px;
+  font-size: 15px;
+}
+.luv_div2{
+  float:left;width: 200px;text-align: left;height: 16px;color: #303133
+}
+.luv_div3{
+  float:right;width: 50px;text-align: center;height: 16px;color: #303133
+}
+.luv_table{
+  width: 250px;margin-top:20px;
+  height: 20px;
+  border-radius:20px;overflow:hidden;
+}
+.luv_td{
+  background-color: #3398DB;text-align: center;
+  color: whitesmoke;
+}
+.luv_td2{
+  background-color: #F56C6C
+}
+
+.user-avatar{
+  width: 40px;
+  height: 40px;
+}
+/*去掉滚动条*/
+.element::-webkit-scrollbar {display:none;}
+.element{
+  background-color: #E9EEF3;
+  height: 930px;
+  overflow-y: scroll;
+}
+/*手型图标*/
+.shouxing{
+cursor:pointer
+}
+/*图表样式*/
+.borderradius{
+  border-radius:12px 12px 12px 12px;
+  border: 1px solid #DCDFE6;
+  width: 600px;
+  height:300px;
+  background:#fff;
+}
+/*編輯*/
+.edit{
+  padding-top:5px;
+  width: 40px;
+  height:100%;
+  float: left;
+}
+.shenglue{
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+.top_50{
+  margin-top:50px
+}
+.rate{
+  width: 200px;
+  height: 200px;
+  background-color:#fff;
+  float: left;
+}
+.rate_color{
+  color: #606266
+}
+/*标题*/
+.title_color{
+  height: 50px;
+  color: rgb(48, 49, 51);
+  font-size: 25px;
+  width: 100%;
+  background-color: #ffffff;
+}
+.title_line{
+  width: 100%;
+  height: 2px;
+  background-color: #2baab1;
+  padding-top: 0px
+}
+.title_size{
+  font-size:25px
+}
+.shenglue{
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+.merge3{
+  width: 150px;
+  height:25px;background:#4c5f70;color:#fff;font-size: 15px;
+}
+.merge2{
+  width: 520px;
+  height:25px;background:#fff;color:#606266;font-size: 14px;
+}
+
+.upload_d_1{
+  width: 335px;height: 40px
+}
+.upload_l_1{
+  float: left;margin-top:5px
+}
+.upload_d_2{
+  width:250px;margin-left:10px;float: left;margin-bottom:10px
+}
+
+
+
