@@ -28,4 +28,4 @@
 
 **显示在pc端**
 
-！[imges](https://hewencheng.github.io/web_Analysis.github.io/src/img/movie-1.png)
+![imges](https://hewencheng.github.io/web_Analysis.github.io/img/Browse2.png)
