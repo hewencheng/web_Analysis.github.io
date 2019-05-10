@@ -28,4 +28,4 @@
 
 **显示在pc端**
 
-！[系统](https:://github.com/hewencheng/web_Analysis.github.io/tree/master/img/Browse2.png,"Browse2.png")
+	！[img](https:://github.com/hewencheng/web_Analysis.github.io/tree/master/img/Browse2.png,"Browse2.png")
