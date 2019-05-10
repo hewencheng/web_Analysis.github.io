@@ -1,7 +1,7 @@
 # 前言
 
-Vue用于构建用户界面的JavaScript框架。其核心部分主要集中在视图层。项目使用的是Vue2.0版本。
-和element-ui组件。
+**Vue用于构建用户界面的JavaScript框架。其核心部分主要集中在视图层。项目使用的是Vue2.0版本
+和element-ui组件。**
 
 
 
@@ -13,10 +13,18 @@ Vue用于构建用户界面的JavaScript框架。其核心部分主要集中在�
 
 **3.cd my_project**
 
-**4.npm run dev**
+**4.npm run dev 本地运行**
+
+**5.npm run build 打包项目** 
 
 
 
 ## 项目连接
 
 **浏览地址**:https://hewencheng.github.io/webdemo.github.io/
+
+
+## 图片浏览
+
+**pc端**
+
