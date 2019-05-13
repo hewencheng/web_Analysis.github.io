@@ -41,6 +41,25 @@
         <div style="width: 100%;height: 2px;background-color:#67C23A"></div>
         <el-header style="font-size: 25px;color: #303133;position: relative" >
           <i class="el-icon-menu" style="position: absolute;top: 20px;left: 20px;cursor:pointer" @click="show()"></i>
+          <div style="float: right">
+              <div style="float:left;margin-right:10px">
+                <el-dropdown @command="handleCommand">
+                  <span class="el-dropdown-link">
+                      Tiger_he<i class="el-icon-arrow-down el-icon--right"></i>
+                  </span>
+                  <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item command="/">退出</el-dropdown-item>
+                    <!--<el-dropdown-item command="b">狮子头</el-dropdown-item>-->
+                    <!--<el-dropdown-item command="c">螺蛳粉</el-dropdown-item>-->
+                    <!--<el-dropdown-item command="d" disabled>双皮奶</el-dropdown-item>-->
+                    <!--<el-dropdown-item command="e" divided>蚵仔煎</el-dropdown-item>-->
+                  </el-dropdown-menu>
+                </el-dropdown>
+              </div>
+              <div style="float: right">
+                  <img src="../../img/user2.jpg" style="width: 60px;height: 60px;margin-right: 100px"></img>
+              </div>
+          </div>
           <!--<div style="width:30%;cursor:pointer;margin-left: 20px">-->
             <!--<el-tag-->
               <!--v-for="tag in tags"-->
@@ -85,6 +104,13 @@
   .el-menu{
     height: 938px;
   }
+  .el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
+  }
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
 </style>
 
 <script>
@@ -104,6 +130,13 @@
       }
     },
     methods:{
+      handleCommand(command) {
+        this.logining = true;
+        setTimeout(() => {
+          this.loading=false
+          this.$router.push({path:command})
+        }, 2000);
+      },
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
       },

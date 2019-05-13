@@ -21,8 +21,8 @@ export default new Router({
     },
     // 主页
     {
-      path: 'home',
-      name: 'home',
+      path: '/home',
+      name: '/home',
       component: home,
       children: [
             { path: '/Hitmovies',

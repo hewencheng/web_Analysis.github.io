@@ -1,5 +1,6 @@
 <template>
-  <div align="center" v-loading="loading"
+  <div align="center"
+       v-loading="loading"
        element-loading-text="加载中"
        element-loading-spinner="el-icon-loading">
     <div style="margin-top: 50px">
