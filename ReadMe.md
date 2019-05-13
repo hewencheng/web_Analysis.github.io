@@ -1,32 +1,34 @@
-# 前言
+# web_Analysis.github.io
 
-Vue用于构建用户界面的JavaScript框架。其核心部分主要集中在视图层。项目使用的是Vue2.0版本
-和element-ui组件。
+## Objective
+
+Vue is used to build a JavaScript framework for the user interface. Its core part is mainly focused on the view layer.
+The project is using the Vue2.0 version And Element-ui components.
 
 
 
-## 用法
+## Usage
 
-1.$ npm install vue-cli -g 全局安装依赖
+1.$ npm install vue-cli -g Global installation Dependencies
 
-2.$ npm i element-ui -s 安装element-ui
+2.$ npm i element-ui -s Installing Element-ui
 
 3.cd my_project
 
-4.npm run dev 本地运行
+4.npm run dev Local running
 
-5.npm run build 打包项目
-
-
-
-## 项目连接
-
-浏览地址:https://hewencheng.github.io/web_Analysis.github.io/dist/index.html
+5.npm run build Packaging projects
 
 
-## 图片浏览
 
-显示在pc端
+## Project connections
+
+Browse addresses:https://hewencheng.github.io/web_Analysis.github.io/dist/index.html
+
+
+## Picture browsing
+
+Display on PC side
 
 ![imges](https://hewencheng.github.io/web_Analysis.github.io/img/Browse2.png)
 
