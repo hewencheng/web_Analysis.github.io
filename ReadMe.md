@@ -21,7 +21,7 @@ Vue用于构建用户界面的JavaScript框架。其核心部分主要集中在�
 
 ## 项目连接
 
-浏览地址:https://hewencheng.github.io/webdemo.github.io/
+浏览地址:https://hewencheng.github.io/web_Analysis.github.io/dist/index.html
 
 
 ## 图片浏览
