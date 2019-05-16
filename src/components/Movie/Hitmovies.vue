@@ -15,7 +15,7 @@
         clearable>
       </el-input>
       <el-button type="primary" size="mini" icon="el-icon-search" @click="Searchtype(input_movie)">搜索</el-button>
-      <el-button type="primary" size="mini" icon="el-icon-zoom-in" style="margin-left: 0px">新增</el-button>
+      <el-button type="primary" size="mini" icon="el-icon-zoom-in" style="margin-left: 0px" @click="exportExcel('电影统计')">导出excel</el-button>
       <div style="margin: 15px 0;"></div>
       <el-radio-group v-model="type" size="mini" @change="TypeChange(type)">
         <span v-for="val in typelist" style="margin-left: 10px">
@@ -27,6 +27,7 @@
     <!--分页-->
       <div>
       <el-table
+        id="out-table"
         v-loading="loading"
         element-loading-text="加载中"
         element-loading-spinner="el-icon-loading"

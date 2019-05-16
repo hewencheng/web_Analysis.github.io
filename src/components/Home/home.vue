@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div v-loading="loading"
+       element-loading-text="加载中"
+       element-loading-spinner="el-icon-loading">
     <el-container>
       <el-row class="tac">
         <el-menu
@@ -12,29 +14,38 @@
           text-color="#bfcbd9"
           active-text-color="#409eff"
           :collapse="isCollapse" router>
-          <div style="height: 15px"></div>
-          <span style="font-size: 28px;color: rgb(191, 203, 217)" v-show="isCollapse2">数据分析系统</span>
-          <div style="height: 15px"></div>
-          <el-submenu index="1">
-            <template slot="title">
-              <i class="el-icon-video-camera"></i>
-              <span>电影</span>
-            </template>
-            <el-menu-item-group>
-              <el-menu-item index="/Hitmovies">热搜-电影</el-menu-item>
-              <el-menu-item index="/Scorechart">数据-分析</el-menu-item>
-              <el-menu-item index="/CreateData">创建-数据</el-menu-item>
-            </el-menu-item-group>
-          </el-submenu>
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-headset"></i>
-              <span>音乐</span>
-            </template>
-            <el-menu-item-group>
-              <el-menu-item index="/Hitmusic" >热搜-音乐</el-menu-item>
-            </el-menu-item-group>
-          </el-submenu>
+            <div style="height: 15px"></div>
+            <span style="font-size: 28px;color: rgb(191, 203, 217)" v-show="isCollapse2">数据分析系统</span>
+            <div style="height: 15px"></div>
+            <el-submenu index="1">
+              <template slot="title">
+                <i class="el-icon-video-camera"></i>
+                <span>电影</span>
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="/Hitmovies">热搜-电影</el-menu-item>
+                <el-menu-item index="/Scorechart">数据-分析</el-menu-item>
+                <el-menu-item index="/CreateData">创建-数据</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
+            <el-submenu index="2">
+              <template slot="title">
+                <i class="el-icon-headset"></i>
+                <span>音乐</span>
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="/Hitmusic" >热搜-音乐</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
+            <el-submenu index="3">
+              <template slot="title">
+                <i class="el-icon-mic"></i>
+                <span>斗鱼</span>
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="/Fish_anchor" >斗鱼-主播</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
         </el-menu>
       </el-row>
       <el-container>
@@ -48,16 +59,13 @@
                       Tiger_he<i class="el-icon-arrow-down el-icon--right"></i>
                   </span>
                   <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item command="/home">首页</el-dropdown-item>
                     <el-dropdown-item command="/">退出</el-dropdown-item>
-                    <!--<el-dropdown-item command="b">狮子头</el-dropdown-item>-->
-                    <!--<el-dropdown-item command="c">螺蛳粉</el-dropdown-item>-->
-                    <!--<el-dropdown-item command="d" disabled>双皮奶</el-dropdown-item>-->
-                    <!--<el-dropdown-item command="e" divided>蚵仔煎</el-dropdown-item>-->
                   </el-dropdown-menu>
                 </el-dropdown>
               </div>
               <div style="float: right">
-                  <img src="../../img/user2.jpg" style="width: 60px;height: 60px;margin-right: 100px"></img>
+                  <img src="../../img/user2.png" style="width: 60px;height: 60px;margin-right: 100px"></img>
               </div>
           </div>
           <!--<div style="width:30%;cursor:pointer;margin-left: 20px">-->
@@ -127,11 +135,12 @@
       return{
         isCollapse:false,
         isCollapse2:true,
+        loading:false,
       }
     },
     methods:{
       handleCommand(command) {
-        this.logining = true;
+        this.loading=true
         setTimeout(() => {
           this.loading=false
           this.$router.push({path:command})

@@ -30,6 +30,15 @@
           <el-menu-item index="/" >热搜-音乐</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+      <el-submenu index="3">
+        <template slot="title">
+          <i class="el-icon-headset"></i>
+          <span>斗鱼</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/" >斗鱼-</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
     </el-menu>
   </el-row>
 </template>

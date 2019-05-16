@@ -8,6 +8,7 @@ import Hitmovies from '@/components/Movie/Hitmovies'
 import Scorechart from '@/components/Movie/Score-chart'
 import CreateData from '@/components/Movie/CreateData'
 import Hitmusic from '@/components/Music/Hitmusic'
+import Fish_anchor from '@/components/Fish/Fish_anchor'
 
 
 Vue.use(Router)
@@ -37,6 +38,9 @@ export default new Router({
             { path: '/Hitmusic',
               component: Hitmusic,
               meta:{title:'热门-音乐'}},
+            { path: '/Fish_anchor',
+              component: Fish_anchor,
+              meta:{title:'主播-信息'}},
       ]},
     
     //功能

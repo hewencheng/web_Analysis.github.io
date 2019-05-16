@@ -1,3 +1,5 @@
+import FileSaver from 'file-saver'
+import XLSX from 'xlsx'
 export default {
   install(Vue, options) {
 
@@ -51,7 +53,7 @@ export default {
           this.page_total_cnts = response.body.data.page_total_cnts;
           this.total=this.pageSize*this.page_total_cnts
           this.pagination = response.body.data;
-          console.log(response)
+          console.log(this.datatable)
         }else{
           console.log("code返回错误"+response.body.code)
         }
@@ -313,6 +315,18 @@ export default {
         total:10,
         datatable:[{}]
       }
+    }
+  
+    Vue.prototype.exportExcel = function(name){//导出excel
+      let wb = XLSX.utils.table_to_book(document.querySelector('#out-table'));
+      let wbout = XLSX.write(wb, { bookType: 'xlsx', bookSST: true, type: 'array' });
+      try {
+        FileSaver.saveAs(new Blob([wbout], { type: 'application/octet-stream' }), name+'.xlsx')
+      } catch (e) {
+        if (typeof console !== 'undefined')
+          console.log(e, wbout)
+      }
+      return wbout
     }
   }
 }
