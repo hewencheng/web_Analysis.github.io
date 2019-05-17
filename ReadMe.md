@@ -30,6 +30,8 @@ Browse addresses:https://hewencheng.github.io/web_Analysis.github.io/dist/index.
 
 Display on PC side
 
+![imges](https://hewencheng.github.io/web_Analysis.github.io/img/Browse4.png)
+
 ![imges](https://hewencheng.github.io/web_Analysis.github.io/img/Browse2.png)
 
 ![imges](https://hewencheng.github.io/web_Analysis.github.io/img/Browse3.png)

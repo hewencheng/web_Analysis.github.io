@@ -4,10 +4,19 @@
       <el-input
         style="width: 200px"
         placeholder="请输入电影"
+        size="mini"
         clearable>
       </el-input>
       <el-button type="primary" size="mini" icon="el-icon-search" >搜索</el-button>
-      <el-button type="primary" size="mini" icon="el-icon-zoom-in" style="margin-left: 0px" @click="exportExcel('电影统计')">导出excel</el-button>
+      <el-select v-model="typevalue" filterable placeholder="请选择" size="mini">
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.label">
+        </el-option>
+      </el-select>
+      <el-button type="primary" size="mini" icon="el-icon-zoom-in" style="margin-left: 0px" @click="exportExcel('斗鱼统计',typevalue)">导出</el-button>
       <div style="margin: 15px 0;"></div>
     </div>
     <el-table
@@ -17,7 +26,7 @@
         element-loading-spinner="el-icon-loading"
         :data="datatable"
         border
-        style="width:95%"
+        style="width:100%"
         :cell-style="gettdClass"
         :header-cell-style="getRowClass">
         <el-table-column
@@ -73,6 +82,17 @@
     //请求数据
     data: function(){
       return{
+        options: [{
+          value: '选项1',
+          label: 'xlsx'},
+          {
+            value: '选项2',
+            label: 'txt'},
+          {
+            value: '选项3',
+            label: 'csv'},
+        ],
+        typevalue:"xlsx",
         loading:true,
         type:"",
         pageSize: 10, // 每页大小默认值

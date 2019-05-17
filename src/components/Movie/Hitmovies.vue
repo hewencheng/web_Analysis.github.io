@@ -12,10 +12,19 @@
         style="width: 200px"
         placeholder="请输入电影"
         v-model="input_movie"
+        size="mini"
         clearable>
       </el-input>
       <el-button type="primary" size="mini" icon="el-icon-search" @click="Searchtype(input_movie)">搜索</el-button>
-      <el-button type="primary" size="mini" icon="el-icon-zoom-in" style="margin-left: 0px" @click="exportExcel('电影统计')">导出excel</el-button>
+      <el-select v-model="typevalue" filterable placeholder="请选择" size="mini">
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.label">
+        </el-option>
+      </el-select>
+      <el-button type="primary" size="mini" icon="el-icon-zoom-in" style="margin-left: 0px" @click="exportExcel('电影统计',typevalue)">导出</el-button>
       <div style="margin: 15px 0;"></div>
       <el-radio-group v-model="type" size="mini" @change="TypeChange(type)">
         <span v-for="val in typelist" style="margin-left: 10px">
@@ -136,6 +145,17 @@
     //请求数据
     data: function(){
       return{
+        options: [{
+          value: '选项1',
+          label: 'xlsx'},
+          {
+            value: '选项2',
+            label: 'txt'},
+          {
+            value: '选项3',
+            label: 'csv'},
+           ],
+        typevalue:"xlsx",
         form:{
           quote:"",
         },

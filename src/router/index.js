@@ -9,6 +9,7 @@ import Scorechart from '@/components/Movie/Score-chart'
 import CreateData from '@/components/Movie/CreateData'
 import Hitmusic from '@/components/Music/Hitmusic'
 import Fish_anchor from '@/components/Fish/Fish_anchor'
+import Fish_Statistics from '@/components/Fish/Fish_Statistics'
 
 
 Vue.use(Router)
@@ -41,7 +42,13 @@ export default new Router({
             { path: '/Fish_anchor',
               component: Fish_anchor,
               meta:{title:'主播-信息'}},
-      ]},
+            { path: '/Fish_Statistics',
+              component: Fish_Statistics,
+              meta:{title:'创建-分析' +
+                  '' +
+                  '' +
+                  ''}},
+        ]},
     
     //功能
     // {

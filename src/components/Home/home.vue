@@ -44,6 +44,7 @@
               </template>
               <el-menu-item-group>
                 <el-menu-item index="/Fish_anchor" >斗鱼-主播</el-menu-item>
+                <el-menu-item index="/Fish_Statistics">数据-分析</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
         </el-menu>

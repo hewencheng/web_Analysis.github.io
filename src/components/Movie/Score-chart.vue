@@ -3,6 +3,15 @@
        v-loading="loading"
        element-loading-text="加载中"
        element-loading-spinner="el-icon-loading">
+    <!--<el-select v-model="typevalue" filterable placeholder="请选择" size="mini">-->
+      <!--<el-option-->
+        <!--v-for="item in options"-->
+        <!--:key="item.value"-->
+        <!--:label="item.label"-->
+        <!--:value="item.label">-->
+      <!--</el-option>-->
+    <!--</el-select>-->
+    <!--<el-button type="primary" size="mini" icon="el-icon-zoom-in" style="margin-left: 0px" @click="exportExcel('电影统计',typevalue)">导出</el-button>-->
     <div style="margin-top: 50px">
       <div id="main1" style="width:60%;height:350px;" class="borderradius"></div>
     </div>

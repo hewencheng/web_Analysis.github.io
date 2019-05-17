@@ -317,11 +317,11 @@ export default {
       }
     }
   
-    Vue.prototype.exportExcel = function(name){//导出excel
+    Vue.prototype.exportExcel = function(name,typevalue){//导出excel
       let wb = XLSX.utils.table_to_book(document.querySelector('#out-table'));
-      let wbout = XLSX.write(wb, { bookType: 'xlsx', bookSST: true, type: 'array' });
+      let wbout = XLSX.write(wb, { bookType: typevalue, bookSST: true, type: 'array' });
       try {
-        FileSaver.saveAs(new Blob([wbout], { type: 'application/octet-stream' }), name+'.xlsx')
+        FileSaver.saveAs(new Blob([wbout], { type: 'application/octet-stream' }), name+'.'+typevalue)
       } catch (e) {
         if (typeof console !== 'undefined')
           console.log(e, wbout)
